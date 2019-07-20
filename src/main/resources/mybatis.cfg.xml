@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="url" value="jdbc:mysql://localhost:3306/tworld?characterEncoding=utf8"/>
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="username" value="root"/>
+                <property name="password" value=""/>
+            </dataSource>
+
+        </environment>
+    </environments>
+<mappers>
+    <mapper resource="com.sz.Mapper/worldMapper.xml"/>
+    <!--<package name="com.sz.Mapper"/>-->
+</mappers>
+</configuration>
